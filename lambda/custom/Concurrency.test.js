@@ -23,11 +23,11 @@ describe("concurrency test", () => {
 		jest.setTimeout(10000);
 		console.log("Calling");
 		alexa.filter((request) => {
-			request.instance = "1";
+			request.instance = "test-device-id-1";
 		});
 		
 		alexa2.filter((request) => {
-			request.instance = "2";
+			request.instance = "test-device-id-2";
 		});
 		keepCalling(alexa, 0);
 		keepCalling(alexa2, 0, done);
@@ -37,11 +37,11 @@ describe("concurrency test", () => {
 		jest.setTimeout(10000);
 		console.log("Calling");
 		alexa.filter((request) => {
-			request.instance = "test-device-1";
+			request.instance = "test-device-id-1";
 		});
 		
 		alexa2.filter((request) => {
-			request.instance = "test-device-2";
+			request.instance = "test-device-id-2";
 		});
 		keepCalling(alexa, 0);
 		keepCalling(alexa2, 0, done);

@@ -23,6 +23,9 @@ const GetNewFactHandler = {
     const request = handlerInput.requestEnvelope;
     const speechOutput = "Hi"
 
+	if (request.instance !== request.context.System.device.deviceId) {
+		throw Error("This should not happen - device IDs do not match");
+	}
 	//console.log("Request: " + JSON.stringify(request, null, 2));
 	console.log(`[index][handler]: deviceId = ${request.context.System.device.deviceId} From: ${request.instance}`);
     return handlerInput.responseBuilder
