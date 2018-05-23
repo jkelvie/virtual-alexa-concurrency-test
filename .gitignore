@@ -2,3 +2,4 @@
 /lambda/custom/node_modules
 /.idea
 coverage
+node_modules

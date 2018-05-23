@@ -6,10 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "jest": {
+	  "silent": false,
+	  "verbose": true
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "ask-sdk-core": "^2.0.0",
-    "ask-sdk-model": "^1.0.0"
+    "ask-sdk-model": "^1.0.0",
+    "jest": "^22.4.4",
+    "virtual-alexa": "^0.6.1"
   }
 }
